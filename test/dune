@@ -1,0 +1,4 @@
+(test
+ (name test_runner)
+ (modules test_runner)
+ (libraries ounit2 ocompiler.lexer))

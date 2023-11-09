@@ -1,0 +1,7 @@
+(executable
+ (name main)
+ (public_name ocompiler)
+ (libraries ocompiler.regex ocompiler.lexer ocompiler.io)
+ (modes byte))
+
+; dependencies
