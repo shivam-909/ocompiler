@@ -12,7 +12,6 @@ let rec string_to_regex s =
         ( Char c,
           string_to_regex (String.concat "" (List.map (String.make 1) cs)) )
 
-(* Helper Functions *)
 let letters = Range (string_to_list "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
 let digits = Range (string_to_list "0123456789")
 let symbols = Range (string_to_list "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz._><=;,:\\")

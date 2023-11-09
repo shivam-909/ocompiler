@@ -2,7 +2,6 @@ open Lexer.Lexing
 open Io.Files
 let string_to_char_list s = List.of_seq (String.to_seq s)
 
-(* The main function to tokenize the input string and print the tokens *)
 let main () =
   let filenames = [
     "./data/collatz.while";
@@ -21,11 +20,10 @@ let main () =
   in
   let file_contents_with_names = read_files_with_names filenames in
   List.iter (fun (name, contents) ->
-    print_endline (name ^ ":\n");  (* Print the name of the file *)
+    print_endline (name ^ ":\n");  
     let tokens = tokenise (string_to_char_list contents) in
     List.iter (fun t -> print_endline (string_of_token t)) tokens;
-    print_endline "\n\n\n"  (* Print three empty lines after tokens *)
+    print_endline "\n\n\n"  
   ) file_contents_with_names
 
-(* Call the main function *)
 let () = main ()
